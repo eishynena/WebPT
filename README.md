@@ -4,17 +4,6 @@ Aplicación web de prueba técnica para Interfell
 
 Elementos usados:
 
-Angular CLI 9
-
-
-     _                      _                 ____ _     ___
-    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
-   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
-  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
- /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
-                |___/
-    
-
 Angular CLI: 9.0.5
 Node: 10.16.0
 OS: win32 x64
@@ -51,10 +40,22 @@ Versión de node v10.16.0
 
 Versión de NPM 6.9.0
 
+Sistema Operativo: Windows 10 X64
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Las url para api de tuten y de utf se encuentran en el enviroments
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+El front-end de UTC se puede acceder con la url base + /utc (http://djaque.prueba.mooo.com/utc)
+
+El front-end del Problema 3 sólo ejecutando la url base  (http://djaque.prueba.mooo.com)
+
+
+
 
 
 
