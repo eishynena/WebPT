@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders,HttpResponse } from '@angular/common/http';
 import 'rxjs/Rx';
+import { environment } from "../../environments/environment";
 
 
-const AMBIENTE = 'https://git.heroku.com/sleepy-refuge-95836.git/api/v3';
+const AMBIENTE = environment.urlUTC;
 
 @Injectable({
   providedIn: 'root'

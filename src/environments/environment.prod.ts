@@ -2,5 +2,6 @@ export const environment = {
   production: true,
   urlApi:'https://dev.tuten.cl/TutenREST/rest/user/',
   app:'APP_BCK',
-  emailBooking: 'contacto@tuten.cl'
+  emailBooking: 'contacto@tuten.cl',
+  urlUTC: 'https://git.heroku.com/sleepy-refuge-95836.git/api'
 };
