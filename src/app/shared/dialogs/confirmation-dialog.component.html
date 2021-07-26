@@ -1,0 +1,12 @@
+<mat-card-header style="margin-left: -1.5%;">
+  <mat-card-title >{{title}}</mat-card-title>
+  <mat-spinner *ngIf="loading" matSuffix diameter="30"></mat-spinner>
+</mat-card-header>
+
+<div mat-dialog-content>
+  <p style="white-space: pre-line;">{{message}}</p>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-raised-button (click)="onClick('Yes')" style="background-color: #2196f3;color: white;"><mat-icon>cloud_download</mat-icon> Donwload</button>
+  <button mat-button (click)="onClick('No')" color="warn">Cancel</button>
+</div>

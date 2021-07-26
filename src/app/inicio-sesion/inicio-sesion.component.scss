@@ -1,0 +1,53 @@
+
+ 
+ .mat-toolbar-single-row {
+    height: 30px !important;
+}  
+@media (max-width: 767px){
+    .mat-toolbar-single-row {
+        height: 30px !important;
+   }  
+   .responsive-l{
+    margin-top:-10%
+    }
+    .responsive-input{
+        margin-top: -5%;
+    }
+    .responsive-img{
+        width: 90%;
+    }
+
+    .login-register-box{
+       
+        margin-top: 3% ;
+    }
+    .responsive-card{
+        margin-bottom: 10%;
+    }
+  
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  
+    .login-register{
+     
+    
+        .login-register-box{
+       
+            margin-top: 2% ;
+        }
+        .responsive-l{
+            margin-top:-10%
+        }
+
+        .responsive-input{
+            margin-top: -10%;
+        }
+
+        .responsive-img{
+            width: 90%;
+        }
+    }
+
+
+    
+  }

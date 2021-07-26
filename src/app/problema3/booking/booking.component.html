@@ -1,0 +1,43 @@
+
+<div class="main-container" [dir]="dir" [ngClass]="{'minisidebar': minisidebar, 'boxed': boxed, 'danger': danger, 'blue': blue, 'green': green, 'dark': dark, 'sidebar-opened': sidebarOpened, 'sidebar-closed': false }"> 
+  
+    <mat-toolbar color="primary" class="topbar telative">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+           
+                <span style="width: 80%;" fxShow="false" fxShow.gt-xs>
+                 <img style="width: 100%;"  src="assets/imagenes/logo-light-text.png" alt="homepage" class="light-logo">
+                </span>
+            </div>
+        </div>
+
+
+        <span fxFlex></span>
+      
+        <div align="right"  style="margin-right:50px; ">
+           
+            <button mat-icon-button  (click)="onCerrarSesion()" style="font-size: 20px;">
+                <mat-icon>exit_to_app</mat-icon> Salir
+            </button>
+        </div>
+        
+  
+    </mat-toolbar>
+ 
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 1 : 1" [ngClass]="{'minisidebar': minisidebar}">
+     
+
+      
+        <mat-sidenav-content class="page-wrapper">
+                 
+                <div class="page-content">
+                   
+                        <router-outlet><app-booking-grid><app-spinner></app-spinner></app-booking-grid></router-outlet>
+                        
+                </div>    
+               
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+    

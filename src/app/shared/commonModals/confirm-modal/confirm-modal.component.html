@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  <p>{{data.message}}</p>
+  <p class="text-center"><b>{{data.question}}</b></p>
+</div>
+<div mat-dialog-actions style="float: right; margin-top: 15px; margin-bottom: 0px;">
+
+  <button mat-button (click)="onCancelClick()" class="btn-md" *ngIf="data.buttons.cancel"
+    cdkFocusInitial>{{data.buttons.cancel}}</button>
+  <button mat-button (click)="onNoClick()" class="btn-md" *ngIf="data.buttons.no">{{data.buttons.no}}</button>
+  <button mat-raised-button (click)="onYesClick()" color="primary" class="btn-md" *ngIf="data.buttons.yes">{{data.buttons.yes}}</button>
+</div>

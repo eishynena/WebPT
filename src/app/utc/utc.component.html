@@ -1,0 +1,53 @@
+<div class="utc-card"  style="background-image:url(assets/imagenes/time.jpg);">
+    <div class="utc-card-box">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>UTC converter</mat-card-title>
+              </mat-card-header>
+            <mat-card-content>  
+              
+                <div fxLayout="row wrap" >
+                    <div fxFlex.xl="50%" fxFlex.lg="50%" fxFlex.md="50%" fxFlex.sm="60%" 
+                        fxFlex.xs="60%" fxFlex="auto" class="p-responsive"  >
+                        <mat-form-field floatLabel="always">
+                            <mat-label >Time: </mat-label>
+                            <input matInput placeholder="Insert time value. Eg. 23:23:00"
+                                [(ngModel)]="utc.time" 
+                                required 
+                                class="text-center" appTime (limpiarTime)="$event" >
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex.xl="50%" fxFlex.lg="50%" fxFlex.md="50%" fxFlex.sm="60%" 
+                        fxFlex.xs="60%" fxFlex="auto" class="p-responsive"  >
+                        <mat-form-field floatLabel="always">
+                            <mat-label >Timezone: </mat-label>
+                            <input matInput placeholder="Insert timezone value. Eg. -3"
+                                [(ngModel)]="utc.timezone" 
+                                 required 
+                                class="text-center"  appTimezone (limpiarTimezone)="$event">
+                        </mat-form-field>
+                    </div>
+                 
+                </div>
+                <div  class="p-20 p-r-20 p-l-20" align="center">
+                    <button mat-raised-button  class="btn-sm" type="button" (click)="convertirUTC()">
+                     Convert
+                    </button> 
+                  </div>
+
+                  <div class="row text-center m-b-10" style="font-size: 14px;">
+                    * Obligatory fields
+                </div>
+
+                <div class="row" *ngIf="alert" class="text-center">
+                    <div class="messageIcon">
+                        <mat-icon class="text-danger">info</mat-icon>
+                        <span class="text-danger">{{alert}}</span>
+                    </div>
+                </div>
+           
+            </mat-card-content>
+            
+        </mat-card>
+    </div>    
+</div>

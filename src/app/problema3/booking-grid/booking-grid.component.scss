@@ -1,0 +1,53 @@
+:host {
+    text-align: center;
+    margin-top: 2.5rem;
+    display: block;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .header {
+    width: 100%;
+    position: relative;
+   
+  }
+
+
+
+.mat-table {
+  width: 100%;
+
+  .mat-cell {
+    span {       
+      display: block; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      justify-content: center;
+    }
+  }
+  .mat-header-cell {
+    
+    justify-content: center;
+    min-width: 200px;
+    position: relative;  
+  
+  }
+  .mat-cell,
+  .mat-header-cell {
+
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}

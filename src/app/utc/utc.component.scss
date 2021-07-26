@@ -1,0 +1,133 @@
+mat-label{
+ 
+  font-size: 20px;
+}
+
+button{
+  background-color: #2196f3;
+  color: white;
+}
+
+
+
+.titulo-inicio{
+    max-width:80%;
+   }
+   
+.display-responsive{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+  }
+  
+  .contenido{
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  
+  .mat-form-field-infix .span-bs .mat-form-field .shadow-note{
+    text-align: right;
+  }
+  .content-registro{
+      max-width: 350px;    
+      margin: auto !important;
+  }
+  
+  .recaudo{
+    padding-top: 15px;
+  }
+  
+  .adjuntarButton{
+    cursor: pointer;
+  }
+  .recaudo-file{
+    padding-top: 10px;
+  }
+  
+  .recaudo-status{
+    padding-top: 15px;
+    padding-left: 20px;
+  }
+  
+  .sub-title{
+          
+  }
+  
+  ::placeholder {
+      font-size: 14px;
+     
+    }
+  
+    .hide {
+      display: none;
+    }
+  
+    @media (max-width: 767px){
+      
+      .p-responsive{
+          padding: 1px;
+          padding-top: 10px;
+          padding-right: 0px;
+      }
+  
+      .p-respuestas{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+  
+      .p-confirm{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 30px;
+        padding-bottom: 0px;
+      }
+  
+      .login-telefono{
+     
+        height: 500px;
+        width: 90%;  
+    }
+     
+   }
+  
+   @media (min-width: 600px) and (orientation: landscape) { 
+    .p-responsive{
+      padding: 1px;
+      padding-top: 10px;
+      padding-right: 20px;
+    }
+    .p-respuestas{
+      padding-left: 0px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .p-confirm{
+      padding-left: 10px;
+      padding-right: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+  }
+  .modal-footer{
+    padding-top: 10px;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+  
+    .login-telefono{
+     
+      width: 150%;  
+  }
+  }
+  
+  @media (min-width: 1366px) and (max-width: 1440px) {
+  
+    .login-telefono{
+     
+      width: 130%;  
+  }
+  }
+  

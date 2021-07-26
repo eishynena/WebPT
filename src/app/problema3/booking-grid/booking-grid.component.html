@@ -1,0 +1,185 @@
+
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex.gt-sm="100" fxFlex.gt-xs="200" fxFlex.gt-xl="100" fxFlex.gt-lg="100" fxFlex.gt-md="100" fxFlex="auto">
+
+    <mat-card>
+       
+      <mat-card-content>
+        <mat-card-header>
+          <mat-card-title>Reserva </mat-card-title>
+          <mat-spinner *ngIf="loading" matSuffix diameter="30"></mat-spinner>
+      
+        </mat-card-header>
+        
+
+      </mat-card-content>
+      <mat-card-content> 
+     
+          <table mat-table  [dataSource]="dataSource" class="mat-elevation-z8" >
+           
+            <!-- Position Column -->
+            <ng-container matColumnDef="bookingid">
+              <th mat-header-cell *matHeaderCellDef > 
+                <div class="header">
+                  <span> BookingId</span>
+                  <button mat-button class="btn-toggle" [matMenuTriggerFor]="menu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+        
+                </div>
+                <mat-menu #menu>
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+                      BookingId
+                  </div>
+                  <div mat-menu-item mat-filter-item [disableRipple]="true">
+                    <mat-form-field>
+                      <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Condiciones' [(value)]="searchCondition.bookingid" (selectionChange)="applyFilter('bookingid',0)"> 
+                        <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+        
+                  <div mat-menu-item mat-filter-item [disableRipple]="true">
+                    <mat-form-field>
+                      <input matInput placeholder="Valor" [(ngModel)]="searchValue.bookingid" (keyup)="applyFilter('bookingid',0)" autocomplete="off">
+                    </mat-form-field>
+                  </div>
+                 
+                  <div mat-menu-item  [disableRipple]="true" *ngIf="logicOperator[0]['bookingid'].show">
+                    
+                    <mat-radio-group   aria-label="Select an option">
+                      <mat-radio-button   [value]="logicOperator[0]['bookingid'].value" (click)="$event.stopPropagation()"   (change)="checkBoxSelected($event,'bookingid',0)" [checked]="logicOperator[0]['bookingid'].and"
+                     >Y
+                        
+                      </mat-radio-button>
+                      <mat-radio-button   [value]="logicOperator[0]['bookingid'].value2" (click)="$event.stopPropagation()"   (change)="checkBoxSelected($event,'bookingid',0)" [checked]="logicOperator[0]['bookingid'].or"
+                     >O</mat-radio-button>
+                    </mat-radio-group>
+                   
+                  </div>
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" *ngIf="logicOperator[0]['bookingid'].show">
+                    <mat-form-field>
+                      <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Condiciones' [(value)]="searchConditionOP.bookingid" (selectionChange)="secondOption('bookingid',0)" > 
+                        <mat-option *ngFor="let  condition of conditionsListOP" [value]="condition.value">{{condition.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+        
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" *ngIf="logicOperator[0]['bookingid'].show">
+                    <mat-form-field>
+                      <input matInput placeholder="Valor" [(ngModel)]="searchValueOP.bookingid" (keyup)="applyFilterLogic('bookingid',0)" (focus)="setupFilterLogicalOperator('bookingid',0)" autocomplete="off">
+                    </mat-form-field>
+                  </div>
+                
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" *ngIf="logicOperator[0]['bookingid'].show">
+                    <button mat-raised-button (click)="clearColumn('bookingid',0, $event)">Limpiar</button>
+        
+                  </div>
+                </mat-menu>
+        
+              </th>
+              <td mat-cell *matCellDef="let element"> {{element.bookingid}} </td>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="cliente">
+              <th mat-header-cell *matHeaderCellDef >
+               
+                  Cliente
+             
+              </th>
+              <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="fecha">
+              <th mat-header-cell *matHeaderCellDef >
+                
+                  Fecha de Creación
+             
+           
+              </th>
+              <td mat-cell  *matCellDef="let element"> {{element.fecha}} </td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="direccion">
+              <th mat-header-cell *matHeaderCellDef >
+               
+                  Dirección
+              </th>
+              <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+            </ng-container>
+        
+            
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="precio">
+              <th mat-header-cell *matHeaderCellDef >
+                <div class="header">
+                      Precio
+                  <button mat-button class="btn-toggle" [matMenuTriggerFor]="menu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+                </div>
+                
+                <mat-menu #menu>
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" class="menu-title">
+                      Precio
+                  </div>
+                  <div mat-menu-item mat-filter-item [disableRipple]="true">
+                    <mat-form-field>
+                      <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Conditions' [(value)]="searchCondition.precio" (selectionChange)="applyFilter('precio',1)">
+                        <mat-option *ngFor="let  condition of conditionsList" [value]="condition.value">{{condition.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+        
+                  <div mat-menu-item mat-filter-item [disableRipple]="true">
+                    <mat-form-field>
+                      <input matInput placeholder="Valor" [(ngModel)]="searchValue.precio" (keyup)="applyFilter('precio',1)" autocomplete="off">
+                    </mat-form-field>
+                  </div>
+
+                  <div mat-menu-item  [disableRipple]="true" *ngIf="logicOperator[1]['precio'].show">
+                    
+                    <mat-radio-group   aria-label="Select an option">
+                      <mat-radio-button   [value]="logicOperator[1]['precio'].value" (click)="$event.stopPropagation()"   (change)="checkBoxSelected($event,'precio',1)" [checked]="logicOperator[1]['precio'].and">Y</mat-radio-button>
+                      <mat-radio-button   [value]="logicOperator[1]['precio'].value2" (click)="$event.stopPropagation()"   (change)="checkBoxSelected($event,'precio',1)" [checked]="logicOperator[1]['precio'].or">O</mat-radio-button>
+                    </mat-radio-group>
+                   
+                  </div>
+
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" *ngIf="logicOperator[1]['precio'].show">
+                    <mat-form-field>
+                      <mat-select [panelClass]="'mat-elevation-z10'" placeholder='Condiciones' [(value)]="searchConditionOP.precio" (selectionChange)="secondOption('precio',1)" > 
+                        <mat-option *ngFor="let  condition of conditionsListOP" [value]="condition.value">{{condition.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+        
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" *ngIf="logicOperator[1]['precio'].show">
+                    <mat-form-field>
+                      <input matInput placeholder="Valor" [(ngModel)]="searchValueOP.precio" (keyup)="applyFilterLogic('precio',1)" (focus)="setupFilterLogicalOperator('precio',1)" autocomplete="off">
+                    </mat-form-field>
+                  </div>
+                  <div mat-menu-item mat-filter-item [disableRipple]="true" *ngIf="logicOperator[1]['precio'].show">
+                    <button mat-raised-button (click)="clearColumn('precio',1, $event)">Limpiar</button>
+        
+                  </div>
+                </mat-menu>
+              </th>
+              <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+            </ng-container>
+      
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+       
+
+    </mat-card-content> 
+      </mat-card>
+   
+  </div>
+</div>
+
+
