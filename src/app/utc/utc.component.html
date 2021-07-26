@@ -3,6 +3,8 @@
         <mat-card>
             <mat-card-header>
                 <mat-card-title>UTC converter</mat-card-title>
+                <mat-spinner *ngIf="loading" matSuffix diameter="30"></mat-spinner>
+
               </mat-card-header>
             <mat-card-content>  
               

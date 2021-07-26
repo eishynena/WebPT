@@ -51,7 +51,7 @@ export class BookingComponent implements OnInit {
       this.router.navigate(['booking']);
      
     }else{
-      this.router.navigate(['/inicio-sesion']);
+      this.router.navigate(['inicio-sesion']);
     }
   }
 
@@ -62,6 +62,6 @@ export class BookingComponent implements OnInit {
   onCerrarSesion() {
     this.iniciosesion.clearSession();
 
-    this.router.navigate(['/inicio-sesion']);
+    this.router.navigate(['inicio-sesion']);
   }
 }

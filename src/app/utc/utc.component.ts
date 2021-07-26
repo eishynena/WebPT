@@ -92,6 +92,8 @@ export class UTCComponent implements OnInit {
                       this.alert =error.error[0].mensaje;
                     }
                   });
+                }else{
+                  this.loading  =false;
                 }
          
           

@@ -18,7 +18,6 @@ import { LimpiarContrasenaDirective } from './directives/limpiar-campos/limpiar-
 import { TimeDirective } from './directives/time/time';
 import { TimezoneDirective } from './directives/timezone/timezone';
 import { FilterItemDirective } from './directives/filter-item/filter-item.directive';
-import { ResizeColumnDirective } from './directives/resize-column/resize-column.directive';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,7 @@ import { ResizeColumnDirective } from './directives/resize-column/resize-column.
     LimpiarContrasenaDirective,
     TimezoneDirective,
     ConfirmationDialogComponent,
-    FilterItemDirective,
-    ResizeColumnDirective
+    FilterItemDirective
   ],
   imports: [ 
     CommonModule,
@@ -56,8 +54,7 @@ import { ResizeColumnDirective } from './directives/resize-column/resize-column.
     LimpiarContrasenaDirective,
     TimezoneDirective,
     TimeDirective,
-    FilterItemDirective,
-    ResizeColumnDirective
+    FilterItemDirective
    ]
 })
 export class SharedModule { }
