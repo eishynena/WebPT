@@ -20,7 +20,7 @@ export class UTCComponent implements OnInit {
     time:"",
     timezone:""
   }
-  public json= {};
+ 
   constructor(
 
 		private dialog: MatDialog,
@@ -28,9 +28,6 @@ export class UTCComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    this.json = null;
-
 
   }
 
@@ -102,30 +99,6 @@ export class UTCComponent implements OnInit {
       
     }
     }
-    
 
-     downloadJson(blob, filename) {
-      if (window.navigator.msSaveOrOpenBlob) 
-          window.navigator.msSaveOrOpenBlob(blob, filename);
-      else { // Others
-          var a = document.createElement("a"),
-                  url = URL.createObjectURL(blob);
-          a.href = url;
-          a.download = filename;
-          document.body.appendChild(a);
-          a.click();
-          setTimeout(function() {
-              document.body.removeChild(a);
-              window.URL.revokeObjectURL(url);  
-          }, 0); 
-      }
-  }
-
-    exportJson(): void {
-      console.log(this.json)
-      const c = JSON.stringify(this.json);
-      const file = new Blob([c], {type: 'text/json'});
-      this.downloadJson(file,"response.json");
-    }
 
 }
